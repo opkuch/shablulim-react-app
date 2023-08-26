@@ -1,0 +1,93 @@
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: 0.2s ease;
+  padding-block: 5px;
+  padding-inline: 15px;
+  &.shadow {
+    box-shadow: 1px 1px 3px rgba(40, 40, 40, 0.714);
+  }
+  &.icon-left {
+    flex-direction: row;
+  }
+
+  &.icon-right {
+    flex-direction: row-reverse;
+  }
+
+  &.outline,
+  &.text {
+    background-color: transparent;
+    box-shadow: none;
+    &.hover:hover {
+      background-color: #e4e4e434;
+    }
+  }
+
+  &.default {
+    &.hover:hover {
+      background-color: darken(#ebebeb, 10%);
+    }
+  }
+  * {
+    pointer-events: none;
+  }
+
+  &:disabled,
+  &[disabled='true'] {
+    color: rgba(100, 100, 100, 0.879) !important;
+    background-color: rgba(210, 198, 214, 0.579);
+    cursor: default;
+    user-select: none;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(210, 198, 214, 0.579);
+    }
+  }
+
+  &.md {
+    padding-inline: 1rem;
+    font-size: 1.2rem;
+  }
+
+  &.lg {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+
+    @media (max-width: 600px) {
+      padding: 0.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+
+  &.icon-button {
+    min-width: 120px;
+  }
+  .icon-img {
+    max-width: 25px;
+    max-height: 25px;
+    // filter: invert(99%) sepia(3%) saturate(608%) hue-rotate(346deg)
+    //   brightness(119%) contrast(100%);
+    transform: rotate(180deg);  
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+
+  &.pill {
+    border-radius: 50px;
+  }
+
+  &.active {
+    background-color: darken(#6e707a, 10%);
+  }
+
+}

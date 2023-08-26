@@ -1,0 +1,150 @@
+.movie-details-wrapper {
+  margin: 0 auto;
+  width: 80vw;
+  form {
+    display: none;
+    text-align: right;
+    padding: 1rem;    
+    input,
+    textarea {
+      width: 100%;
+
+      &:focus-within {
+        border: none;
+        outline: none;
+        border-bottom: 2px solid white;
+      }
+    }
+
+    > *:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+
+    &.open-form {
+      display: block;
+    }
+  }
+}
+.add-comment {
+  margin-top: 2rem;
+  overflow: hidden;
+  > * {
+    margin-bottom: 1.5rem;
+  }
+
+  header {
+    gap: 15px;
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+}
+.player-wrapper {
+  min-height: 60vh;
+  margin: auto;
+}
+.movie-actions {
+  // min-height: 240px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  // @media()
+  .tooltip {
+    border-radius: 50%;
+    background-color: rgb(231, 231, 231);
+    color: black;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    text-align: center;
+    min-width: 35px;
+    min-height: 35px;
+    top: 7px;
+    align-self: flex-end;
+    // padding: 1rem;
+  }
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .video-player-hls {
+    width: 80%;
+    min-width: 300px;
+    outline: 2px solid white;
+
+    @media(max-width: 1000px){
+      width: 100%;
+    }
+  }
+}
+
+.comment-list {
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.493);
+  .comment-name {
+    font-size: 1.3rem;
+    float: right;
+    .ts {
+      font-size: 0.75rem;
+      color: rgb(214, 214, 214);
+    }
+  }
+
+  li {
+    margin-block: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+    padding-block: 1rem;
+    > * {
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      max-width: 15px;
+      position: relative;
+      top: 8px;
+    }
+  }
+}
+
+.enter-coupon-wrapper {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+text-align: center;
+  .modal {
+    padding: 1rem;
+    outline: 1px solid white;
+    border-radius: 5px;
+    max-width: 95%;
+    > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    section {
+      gap: 15px;
+
+      form {
+        gap: 5px;
+        text-align: right;
+        flex-wrap: wrap;
+      }
+    }
+
+    input {
+      width: 250px;
+      background-color: whitesmoke;
+      color: black;
+      &:focus-within {
+        outline: none;
+      }
+    }
+  }
+}

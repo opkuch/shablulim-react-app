@@ -1,0 +1,28 @@
+.about-container {
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    .about-header {
+        padding: 1rem;
+        text-align: center;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    }
+    .about-body {
+        max-width: 85%;
+        font-size: 1.2rem;
+
+        @media(max-width: 700px) {
+            max-width: 100%;
+        }
+        p {
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+        }
+    }
+}
